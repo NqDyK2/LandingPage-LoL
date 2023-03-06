@@ -1,4 +1,4 @@
-@use '../../scss/' as *;
+@use "../../scss/" as *;
 
 .header {
     height: $header-height;
@@ -14,10 +14,10 @@
         height: 100%;
     }
 
-    &__logo { 
+    &__logo {
         width: 145px;
         pointer-events: visible;
-        
+
         img {
             width: 100%;
         }
@@ -25,9 +25,9 @@
 
     &__nav {
         @include flex(center, space-between);
-        
+
         li ~ li {
-            margin-left: 1rem ;
+            margin-left: 1rem;
         }
 
         a {
