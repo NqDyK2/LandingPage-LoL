@@ -1,27 +1,27 @@
-import React from 'react'
 import './section.scss'
 
-const Section = (props) => {
-  return (
-    <div className={`section ${props.className}`}>
-        Section
-    </div>
-  )
+const Section = props => {
+    return (
+        <div className={`section ${props.className}`}>
+            {props.children}
+        </div>
+    )
 }
-export const SectionContent = (props) => {
-    
+
+export const SectionContent = props => {
+
     const bgImage = props.bgImage ? {
         backgroundImage: `url(${props.bgImage})`
     } : {}
 
     return (
-      <div 
-        className={`section__content ${props.className}`}
-        style={bgImage}
-      >
-          Section
-      </div>
+        <div
+            className={`section__content ${props.className}`}
+            style={bgImage}
+        >
+            {props.children}
+        </div>
     )
-  }
+}
 
 export default Section

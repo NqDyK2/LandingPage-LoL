@@ -1,19 +1,18 @@
-import React from 'react'
-import Section, {SectionContent} from "../section/Section"
+import Section, { SectionContent } from "../section/Section"
 
-const HomeSection = (props) => {
-  return (
-    <Section
-        className={props.className}
-    >
-        <SectionContent 
-            className={props.contentClassName} 
-            bgImage={props.bgImage}
+const HomeSection = props => {
+    return (
+        <Section
+            className={props.className}
         >
-            {props.children}
-        </SectionContent>
-    </Section>
-  )
+            <SectionContent
+                className={props.contentClassName}
+                bgImage={props.bgImage}
+            >
+                {props.children}
+            </SectionContent>
+        </Section>
+    )
 }
 
 export default HomeSection
